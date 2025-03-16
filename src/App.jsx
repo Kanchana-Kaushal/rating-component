@@ -43,7 +43,7 @@ function App() {
       {!isSubmitted ? (
         <section className="bg-Dark-Blue w-9/10 max-w-sm space-y-4 rounded-xl p-8">
           <div className="flex aspect-square size-10 items-center justify-center rounded-full bg-gray-700">
-            <img src="../src/assets/icon-star.svg" alt="" />
+            <img src="../public/icon-star.svg" alt="star icon" />
           </div>
 
           <h1 className="text-2xl font-bold text-gray-50">How did we do?</h1>
@@ -52,12 +52,17 @@ function App() {
             feedback is appreciated to help us improve our offering!
           </p>
 
+          <p className="sr-only">You selected {rate ? rate : "nothing yet"}</p>
+
           <form action={handleSubmit}>
             <section className="my-6 flex items-center justify-between font-semibold text-gray-400">
               <RatingButtons />
             </section>
 
-            <button className="bg-Orange hover:bg-White w-full cursor-pointer rounded-full p-2 font-bold uppercase transition-colors duration-75 ease-in">
+            <button
+              className="bg-Orange hover:bg-White w-full cursor-pointer rounded-full p-2 font-bold uppercase transition-colors duration-75 ease-in"
+              aria-label="submit-button"
+            >
               submit
             </button>
           </form>
@@ -70,8 +75,8 @@ function App() {
           className="bg-Dark-Blue w-9/10 max-w-sm space-y-2 rounded-xl p-8 text-center"
         >
           <img
-            src="../src/assets/illustration-thank-you.svg"
-            alt=""
+            src="../public/illustration-thank-you.svg"
+            alt="thank you image"
             className="mx-auto w-30"
           />
 
