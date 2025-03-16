@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import thankYouImage from "./assets/illustration-thank-you.svg";
+import starIcon from "./assets/icon-star.svg";
 
 function App() {
   const [rate, setRate] = useState(undefined);
@@ -43,7 +45,7 @@ function App() {
       {!isSubmitted ? (
         <section className="bg-Dark-Blue w-9/10 max-w-sm space-y-4 rounded-xl p-8">
           <div className="flex aspect-square size-10 items-center justify-center rounded-full bg-gray-700">
-            <img src="/icon-star.svg" alt="star icon" />
+            <img src={starIcon} alt="star icon" />
           </div>
 
           <h1 className="text-2xl font-bold text-gray-50">How did we do?</h1>
@@ -75,7 +77,7 @@ function App() {
           className="bg-Dark-Blue w-9/10 max-w-sm space-y-2 rounded-xl p-8 text-center"
         >
           <img
-            src="/illustration-thank-you.svg"
+            src={thankYouImage}
             alt="thank you image"
             className="mx-auto w-30"
           />
